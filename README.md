@@ -40,8 +40,8 @@ Most 16S amplicon sequencing uses paired-end reads to sequence the variable regi
 
 > <hands-on-title>Upload 16S sequences</hands-on-title>
 >
-> 1. **Upload steps** {% icon tool %}: Upload 16S data to Galaxy from EBI
->    - *Click Upload*: Find Galaxy's `Upload` icon on the toolbar on the left hand of the screen.
+> 1. **Galaxy Upload steps** {% icon tool %}: Upload 16S data to Galaxy from EBI
+>    - *Click Upload*: Find Galaxy's `Upload` icon on the Galaxy toolbar located on the left hand of the screen.
 >    - *Select the Rule-based tab*: In the pop-up window click the tab labeled `Rule-based`. 
 >    - *Select `Collections`*: From the *Upload type* dropdown menu, select the `Collections` option
 >    - *Copy and paste the following into the `Input field`*: 
@@ -63,7 +63,8 @@ Most 16S amplicon sequencing uses paired-end reads to sequence the variable regi
 >      I3.SRR12400118_S1_L001_R1_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/018/SRR12400118/SRR12400118_1.fastq.gz
 >      I3.SRR12400118_S1_L001_R2_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/018/SRR12400118/SRR12400118_2.fastq.gz
 >      ```
-> 2. **+ Rules** {% icon tool %}: For the two columns of data to be correctly interpreted we need to define what each column means. 
+>      
+> 2. **Add Galaxy Rules** {% icon tool %}: For the two columns of data to be correctly interpreted we need to define what each column means. 
 >      - *Click the `+ Rules` button*: The `+ Rules` button is located in left lower corner of the center panel. 
 >      - *Select `Add / Modify Column Definitions` from dropdown menu*.
 >      - *Click the `+ Add Definition` button*
@@ -77,6 +78,16 @@ Most 16S amplicon sequencing uses paired-end reads to sequence the variable regi
 >      - *Finally, click `Apply`
 >      - *Change the `Name` field to `galaxy_16S_sequences`
 >      - *Finally, click `Upload`
+>        
+> 3. **Import into QIIME2** {% icon tool %}: Once the collection has been uploaded to Galaxy we can import it into QIIME2 
+>      - *Click on the `Tools` icon*: Find Galaxy's `Tools` icon on the Galaxy toolbar located on the left hand of the screen.
+>      - *Search for `qiime2 tools import` in the `Tools` box*: Copy and paste `qiime2 tools import` into the `search tools` field
+>      - *Click the `qiime2 tools import` tool*
+>      - Select `SampleData[PairedEndSequencesWithQuality]` from the "Type of data to import" dropdown menu.
+>      - Select `Casava One Eight Single Lane Per Sample Directory Format` from the "QIIME 2 file format to import from” dropdown menu
+>      - Under "Import Sequences" verify that the "Select a mechanism" section is set to `Use collection to import`
+>      - Verify that the "elements" section is set to use the `galaxy_16S_sequences` collection
+>      - Finally, click the `Run Tool` button.
 {: .hands_on}
 
 Using the Upload Data tool:
