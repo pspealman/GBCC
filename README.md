@@ -1,5 +1,5 @@
 <!---
-layout: tutorial_hands_on
+layout: tutorial_hands_on, formatted for Galaxy Training Network
 
 title: Title of the tutorial
 zenodo_link: '[!]'
@@ -22,15 +22,16 @@ contributors:
 # Project Juliana
 This is a tutorial for 16S environmental microbiome analysis in conjunction with GBCC: Molecular ecology at the sertão - Using Galaxy to empower research in developing communities 
 
-## Environmental metabarcoding
+## Introduction to environmental metabarcoding tutorial
 
 Welcome to []! 
 
-The vast majority of biodiversity in the world, and the basic functioning of Metabarcoding (or amplicon) sequencing and analysis are methods used to gain general high-level information about microbial ecologies by   
+The vast majority of biodiversity in the world is at the microscopic level with the interactions of populations of bacteria, archaea, eukarya and viruses defining a microbial ecology or microbiome [Berg et al. (2020)](https://doi.org/10.1186%2Fs40168-020-00875-0)({cite:t}`berg-2020`). Importantly, the microbial populations of these microbiomes perform tasks essential for larger biomes and global health; such as nutrient turnover, element bio-availability, and carbon sequestration [Bianchi (2021)](https://doi.org/10.1007/s10533-020-00708-0)({cite:t}`bianchi-2021`). Given the complexity of microbiomes and their capacity to change, it is difficult to get a complete picture of any microbiome - but often the first step is understanding the relative abundances of bacterial and archaeal populations at the genus level. Historically, 16S amplicon sequencing (also known as metabarcoding) has been used to capture this information [Caporaso et al. (2010)](https://doi.org/10.1073/pnas.1000080107)({cite:t}`caporaso-2010`). Broadly, 16S amplicon sequencing refers to any method that uses PCR primers to amplify a highly variable regions in the otherwise deeply conserved 16S ribosomal subunit. These variable regions can then be aligned to sequences from known bacteria or archaea helping in the identification of those microbial populations.  
 
-This tutorial focuses on data from [Santana et al. (2024) _Prokaryote communities along a source-to-estuary river continuum in the Brazilian Atlantic Forest_](https://peerj.com/articles/17900/)({cite:t}`santana-2024`).
+This tutorial aims to introduce some of the concepts and tools needed to analyze 16S amplicon sequencing data. It uses two robust and well supported computational tools for this; Galaxy, which provides a web-interface to access high perfomance computational (HPC) servers and QIIME2, a platform that runs all the computational tools needed to analyze metabarcoding data. 
 
-This data was collected along the length of the Juliana River basin located in the southeastern part of Bahia, Brasil in the Pratigi APA. The Juliana river runs for nearly 50 Km, starting with a river source in the Papuã Mountains running westward until it reaches the Serinhaém estuary where Ituberá is located. Three sites were sampled in this study, one was located at the source of the river (Source), another from a midway point along the river (Valley), and finally, along length of urban mangrove mudflat inside Ituberá. 
+## Background about the data sources
+This tutorial uses data from [Santana et al. (2024)](https://peerj.com/articles/17900/)({cite:t}`santana-2024`). This data was collected along the length of the Juliana River basin located in the southeastern part of Bahia, Brasil in the Pratigi APA. The Juliana river runs for nearly 50 Km, starting with a river source in the Papuã Mountains running westward until it reaches the Serinhaém estuary where Ituberá is located. Three sites were sampled in this study, one was located at the source of the river (Source), another from a midway point along the river (Valley), and finally, along length of urban mangrove mudflat inside Ituberá. 
 
 ### Loading the 16S amplicon sequences 
 Most 16S amplicon sequencing uses paired-end reads to sequence the variable regions of bacterial 16S ribosomal DNA. 
