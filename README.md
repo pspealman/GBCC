@@ -77,22 +77,22 @@ Most 16S amplicon sequencing uses paired-end reads to sequence the variable regi
 >    - *Select `Collections`*: From the *Upload type* dropdown menu, select the `Collections` option
 >    - *Copy and paste the following into the `Input field`*: 
 >    - ```
->      V1.SRR12400122_S1_L001_R1_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/022/SRR12400122/SRR12400122_1.fastq.gz
->      V1.SRR12400122_S1_L001_R2_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/022/SRR12400122/SRR12400122_2.fastq.gz
->      V2.SRR12400121_S1_L001_R1_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/021/SRR12400121/SRR12400121_1.fastq.gz
->      V2.SRR12400121_S1_L001_R2_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/021/SRR12400121/SRR12400121_2.fastq.gz
->      S1.SRR12400125_S1_L001_R1_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/025/SRR12400125/SRR12400125_1.fastq.gz
->      S1.SRR12400125_S1_L001_R2_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/025/SRR12400125/SRR12400125_2.fastq.gz
->      S2.SRR12400123_S1_L001_R1_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/023/SRR12400123/SRR12400123_1.fastq.gz
->      S2.SRR12400123_S1_L001_R2_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/023/SRR12400123/SRR12400123_2.fastq.gz
->      S3.SRR12400124_S1_L001_R1_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/024/SRR12400124/SRR12400124_1.fastq.gz
->      S3.SRR12400124_S1_L001_R2_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/024/SRR12400124/SRR12400124_2.fastq.gz
->      I1.SRR12400120_S1_L001_R1_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/020/SRR12400120/SRR12400120_1.fastq.gz
->      I1.SRR12400120_S1_L001_R2_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/020/SRR12400120/SRR12400120_2.fastq.gz
->      I2.SRR12400119_S1_L001_R1_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/019/SRR12400119/SRR12400119_1.fastq.gz
->      I2.SRR12400119_S1_L001_R2_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/019/SRR12400119/SRR12400119_2.fastq.gz
->      I3.SRR12400118_S1_L001_R1_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/018/SRR12400118/SRR12400118_1.fastq.gz
->      I3.SRR12400118_S1_L001_R2_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/018/SRR12400118/SRR12400118_2.fastq.gz
+>    V1.SRR12400122_S1_L001_R1_001.fastq.gz	https://github.com/pspealman/GBCC/raw/refs/heads/main/fastq/V1.SRR12400122_S1_L001_R1_001.fastq.gz
+>    V1.SRR12400122_S1_L001_R2_001.fastq.gz	https://github.com/pspealman/GBCC/raw/refs/heads/main/fastq/V1.SRR12400122_S1_L001_R2_001.fastq.gz
+>    V2.SRR12400121_S1_L001_R1_001.fastq.gz	https://github.com/pspealman/GBCC/raw/refs/heads/main/fastq/V2.SRR12400121_S1_L001_R1_001.fastq.gz
+>    V2.SRR12400121_S1_L001_R2_001.fastq.gz	https://github.com/pspealman/GBCC/raw/refs/heads/main/fastq/V2.SRR12400121_S1_L001_R2_001.fastq.gz
+>    S1.SRR12400125_S1_L001_R1_001.fastq.gz	https://github.com/pspealman/GBCC/raw/refs/heads/main/fastq/S1.SRR12400125_S1_L001_R1_001.fastq.gz
+>    S1.SRR12400125_S1_L001_R2_001.fastq.gz	https://github.com/pspealman/GBCC/raw/refs/heads/main/fastq/S1.SRR12400125_S1_L001_R2_001.fastq.gz
+>    S2.SRR12400123_S1_L001_R1_001.fastq.gz	https://github.com/pspealman/GBCC/raw/refs/heads/main/fastq/S2.SRR12400123_S1_L001_R1_001.fastq.gz
+>    S2.SRR12400123_S1_L001_R2_001.fastq.gz	https://github.com/pspealman/GBCC/raw/refs/heads/main/fastq/S2.SRR12400123_S1_L001_R2_001.fastq.gz
+>    S3.SRR12400124_S1_L001_R1_001.fastq.gz	https://github.com/pspealman/GBCC/raw/refs/heads/main/fastq/S3.SRR12400124_S1_L001_R1_001.fastq.gz
+>    S3.SRR12400124_S1_L001_R2_001.fastq.gz	https://github.com/pspealman/GBCC/raw/refs/heads/main/fastq/S3.SRR12400124_S1_L001_R2_001.fastq.gz
+>    I1.SRR12400120_S1_L001_R1_001.fastq.gz	https://github.com/pspealman/GBCC/raw/refs/heads/main/fastq/I1.SRR12400120_S1_L001_R1_001.fastq.gz
+>    I1.SRR12400120_S1_L001_R2_001.fastq.gz	https://github.com/pspealman/GBCC/raw/refs/heads/main/fastq/I1.SRR12400120_S1_L001_R2_001.fastq.gz
+>    I2.SRR12400119_S1_L001_R1_001.fastq.gz	https://github.com/pspealman/GBCC/raw/refs/heads/main/fastq/I2.SRR12400119_S1_L001_R1_001.fastq.gz
+>    I2.SRR12400119_S1_L001_R2_001.fastq.gz	https://github.com/pspealman/GBCC/raw/refs/heads/main/fastq/I2.SRR12400119_S1_L001_R2_001.fastq.gz
+>    I3.SRR12400118_S1_L001_R1_001.fastq.gz	https://github.com/pspealman/GBCC/raw/refs/heads/main/fastq/I3.SRR12400118_S1_L001_R1_001.fastq.gz
+>    I3.SRR12400118_S1_L001_R2_001.fastq.gz	https://github.com/pspealman/GBCC/raw/refs/heads/main/fastq/I3.SRR12400118_S1_L001_R2_001.fastq.gz
 >      ```
 >      
 > 2. **Add Galaxy Rules** {% icon tool %}: For the two columns of data to be correctly interpreted we need to define what each column means. 
