@@ -35,7 +35,36 @@ This tutorial uses data from [Santana et al. (2024)](https://peerj.com/articles/
 
 ## Preparing the data 
 
-### Importing the 16S sequences
+### The site and the metadata
+lorem ipsum
+> <hands-on-title>Upload metadata</hands-on-title>
+>
+> 0. **Galaxy Upload steps** {% icon tool %}: Upload 16S data to Galaxy from EBI
+>    - *Click Upload*: Find Galaxy's `Upload` icon on the Galaxy toolbar located on the left hand of the screen.
+>    - *Select the Rule-based tab*: In the pop-up window click the tab labeled `Rule-based`. 
+>    - *Select `Collections`*: From the *Upload type* dropdown menu, select the `Collections` option
+>    - *Copy and paste the following into the `Input field`*: 
+>    - ```
+>      V1.SRR12400122_S1_L001_R1_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/022/SRR12400122/SRR12400122_1.fastq.gz
+>      V1.SRR12400122_S1_L001_R2_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/022/SRR12400122/SRR12400122_2.fastq.gz
+>      V2.SRR12400121_S1_L001_R1_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/021/SRR12400121/SRR12400121_1.fastq.gz
+>      V2.SRR12400121_S1_L001_R2_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/021/SRR12400121/SRR12400121_2.fastq.gz
+>      S1.SRR12400125_S1_L001_R1_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/025/SRR12400125/SRR12400125_1.fastq.gz
+>      S1.SRR12400125_S1_L001_R2_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/025/SRR12400125/SRR12400125_2.fastq.gz
+>      S2.SRR12400123_S1_L001_R1_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/023/SRR12400123/SRR12400123_1.fastq.gz
+>      S2.SRR12400123_S1_L001_R2_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/023/SRR12400123/SRR12400123_2.fastq.gz
+>      S3.SRR12400124_S1_L001_R1_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/024/SRR12400124/SRR12400124_1.fastq.gz
+>      S3.SRR12400124_S1_L001_R2_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/024/SRR12400124/SRR12400124_2.fastq.gz
+>      I1.SRR12400120_S1_L001_R1_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/020/SRR12400120/SRR12400120_1.fastq.gz
+>      I1.SRR12400120_S1_L001_R2_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/020/SRR12400120/SRR12400120_2.fastq.gz
+>      I2.SRR12400119_S1_L001_R1_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/019/SRR12400119/SRR12400119_1.fastq.gz
+>      I2.SRR12400119_S1_L001_R2_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/019/SRR12400119/SRR12400119_2.fastq.gz
+>      I3.SRR12400118_S1_L001_R1_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/018/SRR12400118/SRR12400118_1.fastq.gz
+>      I3.SRR12400118_S1_L001_R2_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/018/SRR12400118/SRR12400118_2.fastq.gz
+>      ```
+>      
+
+### Uploading the paired end 16S read sequences
 Most 16S amplicon sequencing uses paired-end reads to sequence the variable regions of bacterial 16S ribosomal DNA. Here we use Galaxy's **Upload** to upload the paired-end fastq files and assign them names. 
 
 > <hands-on-title>Upload 16S sequences</hands-on-title>
@@ -78,8 +107,14 @@ Most 16S amplicon sequencing uses paired-end reads to sequence the variable regi
 >      - *Finally, click `Apply`
 >      - *Change the `Name` field to `galaxy_16S_sequences`
 >      - *Finally, click `Upload`
->        
-> 3. **Import into QIIME2** {% icon tool %}: Once the collection has been uploaded to Galaxy we can import it into QIIME2 
+{: .hands_on}
+
+### Importing the paired end 16S read sequences
+Now that the data is uploaded to your Galaxy account you can import it into QIIME2 for analysis.
+
+> <hands-on-title>Import 16S sequences into Qiime</hands-on-title>
+>
+> 3. **Import paired end sequences into QIIME2** {% icon tool %}: Once the collection has been uploaded to Galaxy we can import it into QIIME2 
 >      - *Click on the `Tools` icon*: Find Galaxy's `Tools` icon on the Galaxy toolbar located on the left hand of the screen.
 >      - *Search for `qiime2 tools import` in the `Tools` box*: Copy and paste `qiime2 tools import` into the `search tools` field
 >      - *Click the `qiime2 tools import` tool*
@@ -88,8 +123,34 @@ Most 16S amplicon sequencing uses paired-end reads to sequence the variable regi
 >      - Under "Import Sequences" verify that the "Select a mechanism" section is set to `Use collection to import`
 >      - Verify that the "elements" section is set to use the `galaxy_16S_sequences` collection
 >      - Finally, click the `Run Tool` button.
+>    
 {: .hands_on}
 
+### Generating ASVs
+Combining the paired-end reads using their overlapping sequence is an essential step for resoling each 16S variable region. We use DADA2 to perform qualit control and paired-end merging and produce **a**mplicon **s**equence **v**ariants (**ASVs**). DADA2 relies on the high-accuracy of contemporary PCR and short-read sequencing technologies that produce 99% accurate DNA sequences. DADA2 performs several steps to ensure high quality ASVs, first it filters reads that have low-quality scores, then it removes duplicated reads creating consensus sequences, it then corrects any sequence errors using quality scores and consensus sequences (*denoising*), lastly a search algorithm runs to identify any possible *PCR chimeras*; artifacts formed by the incorrect combination of two seperate read pairs. Finally, all the remaining read pairs now have high quality, de-noised, non-chimeric, overlapping sequences and they can easily me merged into high quality ASVs.   
+
+> <hands-on-title>Running DADA2</hands-on-title>
+>
+> 4. **Running DADA2 on `galaxy_16S_sequences`** {% icon tool %}:  
+>      - *Search for `qiime2 dada2 denoise-paired` in the `Tools` box*
+>      - Select the ``galaxy_16S_sequences.gza` collection from the "demultiplexed_seqs:" dropdown menu.
+>      - For the `trunc_len_f` box enter a `0`
+>      - For the `trunc_len_r` box enter a `0`
+>      - Click the `Run Tool` button.
+> 
+> 5. **Checking DADA2 denoising statistics** {% icon tool %}:
+>      - *Search for `qiime2 metadata tabulate` in the `Tools` box*
+>      - Select `Metadata from Artifact` from the "input: Metadata" dropdown menu
+>      - Select `denoising_stats.qza` from the "Metadata Source" dropdown menu
+>      - Click the `Run Tool` button.
+>   
+> 6. **Checking ASV sample statistics** {% icon tool %}:
+>      - *Search for `qiime2 metadata tabulate` in the `Tools` box*
+>      - Select `Metadata from Artifact` from the "input: Metadata" dropdown menu
+>      - Select `denoising_stats.qza` from the "Metadata Source" dropdown menu
+>      - Click the `Run Tool` button.
+>    
+{: .hands_on}
 Using the Upload Data tool:
 Steps to setup data_to_import:sequences:
 
