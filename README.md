@@ -35,8 +35,10 @@ This tutorial uses data from [Santana et al. (2024)](https://peerj.com/articles/
 
 ## Preparing the data 
 
-### The site and the metadata
-lorem ipsum
+### Setting up the metadata
+
+
+
 > <hands-on-title>Upload metadata</hands-on-title>
 >
 > 0. **Galaxy Upload steps** {% icon tool %}: Upload 16S data to Galaxy from EBI
