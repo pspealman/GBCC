@@ -41,28 +41,14 @@ This tutorial uses data from [Santana et al. (2024)](https://peerj.com/articles/
 
 > <hands-on-title>Upload metadata</hands-on-title>
 >
-> 0. **Galaxy Upload steps** {% icon tool %}: Upload 16S data to Galaxy from EBI
->    - *Click Upload*: Find Galaxy's `Upload` icon on the Galaxy toolbar located on the left hand of the screen.
->    - *Select the Rule-based tab*: In the pop-up window click the tab labeled `Rule-based`. 
->    - *Select `Collections`*: From the *Upload type* dropdown menu, select the `Collections` option
->    - *Copy and paste the following into the `Input field`*: 
+> 1. **Galaxy Upload steps** {% icon tool %}: Upload the sample metadata to Galaxy from EBI
+>    - *Click the **Upload** icon*: Find Galaxy's **Upload** icon on the Galaxy toolbar located on the left hand of the screen.
+>    - *Select the **Regular** tab*: In the pop-up window click the tab labeled **Regular**. 
+>    - *Click the **Paste / Fetch Data** button*
+>    - *Change **New File** to `sample_metadata.tsv`*
+>    - *Copy and paste the following URL to the **Download URL Field**:  
 >    - ```
->      V1.SRR12400122_S1_L001_R1_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/022/SRR12400122/SRR12400122_1.fastq.gz
->      V1.SRR12400122_S1_L001_R2_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/022/SRR12400122/SRR12400122_2.fastq.gz
->      V2.SRR12400121_S1_L001_R1_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/021/SRR12400121/SRR12400121_1.fastq.gz
->      V2.SRR12400121_S1_L001_R2_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/021/SRR12400121/SRR12400121_2.fastq.gz
->      S1.SRR12400125_S1_L001_R1_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/025/SRR12400125/SRR12400125_1.fastq.gz
->      S1.SRR12400125_S1_L001_R2_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/025/SRR12400125/SRR12400125_2.fastq.gz
->      S2.SRR12400123_S1_L001_R1_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/023/SRR12400123/SRR12400123_1.fastq.gz
->      S2.SRR12400123_S1_L001_R2_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/023/SRR12400123/SRR12400123_2.fastq.gz
->      S3.SRR12400124_S1_L001_R1_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/024/SRR12400124/SRR12400124_1.fastq.gz
->      S3.SRR12400124_S1_L001_R2_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/024/SRR12400124/SRR12400124_2.fastq.gz
->      I1.SRR12400120_S1_L001_R1_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/020/SRR12400120/SRR12400120_1.fastq.gz
->      I1.SRR12400120_S1_L001_R2_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/020/SRR12400120/SRR12400120_2.fastq.gz
->      I2.SRR12400119_S1_L001_R1_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/019/SRR12400119/SRR12400119_1.fastq.gz
->      I2.SRR12400119_S1_L001_R2_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/019/SRR12400119/SRR12400119_2.fastq.gz
->      I3.SRR12400118_S1_L001_R1_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/018/SRR12400118/SRR12400118_1.fastq.gz
->      I3.SRR12400118_S1_L001_R2_001.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR124/018/SRR12400118/SRR12400118_2.fastq.gz
+>      https://github.com/pspealman/GBCC/raw/refs/heads/main/metadata/MappingFile_v2.tsv
 >      ```
 >      
 
@@ -71,7 +57,7 @@ Most 16S amplicon sequencing uses paired-end reads to sequence the variable regi
 
 > <hands-on-title>Upload 16S sequences</hands-on-title>
 >
-> 1. **Galaxy Upload steps** {% icon tool %}: Upload 16S data to Galaxy from EBI
+> 2. **Galaxy Upload steps** {% icon tool %}: Upload 16S data to Galaxy from EBI
 >    - *Click Upload*: Find Galaxy's `Upload` icon on the Galaxy toolbar located on the left hand of the screen.
 >    - *Select the Rule-based tab*: In the pop-up window click the tab labeled `Rule-based`. 
 >    - *Select `Collections`*: From the *Upload type* dropdown menu, select the `Collections` option
@@ -95,7 +81,7 @@ Most 16S amplicon sequencing uses paired-end reads to sequence the variable regi
 >    I3.SRR12400118_S1_L001_R2_001.fastq.gz	https://github.com/pspealman/GBCC/raw/refs/heads/main/fastq/I3.SRR12400118_S1_L001_R2_001.fastq.gz
 >      ```
 >      
-> 2. **Add Galaxy Rules** {% icon tool %}: For the two columns of data to be correctly interpreted we need to define what each column means. 
+> 3. **Add Galaxy Rules** {% icon tool %}: For the two columns of data to be correctly interpreted we need to define what each column means. 
 >      - *Click the `+ Rules` button*: The `+ Rules` button is located in left lower corner of the center panel. 
 >      - *Select `Add / Modify Column Definitions` from dropdown menu*.
 >      - *Click the `+ Add Definition` button*
@@ -116,7 +102,7 @@ Now that the data is uploaded to your Galaxy account you can import it into QIIM
 
 > <hands-on-title>Import 16S sequences into Qiime</hands-on-title>
 >
-> 3. **Import paired end sequences into QIIME2** {% icon tool %}: Once the collection has been uploaded to Galaxy we can import it into QIIME2 
+> 4. **Import paired end sequences into QIIME2** {% icon tool %}: Once the collection has been uploaded to Galaxy we can import it into QIIME2 
 >      - *Click on the `Tools` icon*: Find Galaxy's `Tools` icon on the Galaxy toolbar located on the left hand of the screen.
 >      - *Search for `qiime2 tools import` in the `Tools` box*: Copy and paste `qiime2 tools import` into the `search tools` field
 >      - *Click the `qiime2 tools import` tool*
@@ -133,20 +119,20 @@ Combining the paired-end reads using their overlapping sequence is an essential 
 
 > <hands-on-title>Running DADA2</hands-on-title>
 >
-> 4. **Running DADA2 on `galaxy_16S_sequences`** {% icon tool %}:  
+> 5. **Running DADA2 on `galaxy_16S_sequences`** {% icon tool %}:  
 >      - *Search for `qiime2 dada2 denoise-paired` in the `Tools` box*
 >      - Select the ``galaxy_16S_sequences.gza` collection from the "demultiplexed_seqs:" dropdown menu.
 >      - For the `trunc_len_f` box enter a `0`
 >      - For the `trunc_len_r` box enter a `0`
 >      - Click the `Run Tool` button.
 > 
-> 5. **Checking DADA2 denoising statistics** {% icon tool %}:
+> 6. **Checking DADA2 denoising statistics** {% icon tool %}:
 >      - *Search for `qiime2 metadata tabulate` in the `Tools` box*
 >      - Select `Metadata from Artifact` from the "input: Metadata" dropdown menu
 >      - Select `denoising_stats.qza` from the "Metadata Source" dropdown menu
 >      - Click the `Run Tool` button.
 >   
-> 6. **Checking ASV sample statistics** {% icon tool %}:
+> 7. **Checking ASV sample statistics** {% icon tool %}:
 >      - *Search for `qiime2 metadata tabulate` in the `Tools` box*
 >      - Select `Metadata from Artifact` from the "input: Metadata" dropdown menu
 >      - Select `denoising_stats.qza` from the "Metadata Source" dropdown menu
