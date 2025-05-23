@@ -46,11 +46,11 @@ This tutorial uses data from [Santana et al. (2024)](https://peerj.com/articles/
 >    - *Select the **Regular** tab*: In the pop-up window click the tab labeled **Regular**. 
 >    - *Click the **Paste / Fetch Data** button*
 >    - *Change **New File** to `sample_metadata.tsv`*
->    - *Copy and paste the following URL to the **Download URL Field**:  
+>    - *Copy and paste the following URL to the **Download URL Field***:  
 >    - ```
 >      https://github.com/pspealman/GBCC/raw/refs/heads/main/metadata/MappingFile_v2.tsv
 >      ```
->      
+>
 
 ### Uploading the paired end 16S read sequences
 Most 16S amplicon sequencing uses paired-end reads to sequence the variable regions of bacterial 16S ribosomal DNA. Here we use Galaxy's **Upload** to upload the paired-end fastq files and assign them names. 
