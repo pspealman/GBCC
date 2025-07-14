@@ -41,7 +41,7 @@ This tutorial uses data from [Santana et al. (2024)](https://peerj.com/articles/
 
 > <hands-on-title>Upload metadata</hands-on-title>
 >
-> 1. **Galaxy Upload steps** {% icon tool %}: Upload the sample metadata to Galaxy from EBI
+> 1. **Galaxy Upload steps** {% icon tool %}: Upload the sample metadata to Galaxy from Github
 >    - *Click the **Upload** icon*: Find Galaxy's **Upload** icon on the Galaxy toolbar located on the left hand of the screen.
 >    - *Select the **Regular** tab*: In the pop-up window click the tab labeled **Regular**. 
 >    - *Click the **Paste / Fetch Data** button*
