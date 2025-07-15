@@ -37,8 +37,6 @@ This tutorial uses data from [Santana et al. (2024)](https://peerj.com/articles/
 
 ### Setting up the metadata
 
-
-
 > <hands-on-title>Upload metadata</hands-on-title>
 >
 > 1. **Galaxy Upload steps** {% icon tool %}: Upload the sample metadata to Galaxy from Github
@@ -139,21 +137,6 @@ Combining the paired-end reads using their overlapping sequence is an essential 
 >      - Click the `Run Tool` button.
 >    
 {: .hands_on}
-Using the Upload Data tool:
-Steps to setup data_to_import:sequences:
-
-On the fourth tab (Rule-based):
-
-Set “Upload data as” to Collection(s)
-
-Set “Load tabular data from” to Pasted Table
-
-Paste the following contents into the large text area: 
-
-
-
-
-The distance between these paired reads usually includes an overlap enabling the reads to be joined together. To achieve this we use DADA2 [Callahan et al. (2016)](https://doi.org/10.1038/nmeth.3869)({cite:t`callahan-2016`}).
 
 ### Loading the metadata
 
@@ -171,8 +154,6 @@ If terms like *feature table* and *feature data* aren't clear
 right now, don't worry! They will be clear by the end of the week.
 ```
 ````
-
-
 
 1. **The upstream tutorial** covers steps up to the generation of the feature
    table, which tallys the frequency of amplicon sequence variants (ASV) on a
