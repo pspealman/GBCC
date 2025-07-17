@@ -140,45 +140,18 @@ Combining the paired-end reads using their overlapping sequence is an essential 
 
 ### Loading the metadata
 
-The metadata (or mapping file) is a small, tab-delimited, file that specifies relevant information for the analysis. The one used in this study contains four columns: `sample-id` which is an identifier unique to the study; the `InputFileName` which is the name of the merged file.
+The metadata (or mapping file) is a small, tab-delimited, file that specifies relevant information for the analysis. The one used in this study contains four columns: `sample-id` which is an identifier unique to the study; the `InputFileName` which is the name of the merged file. The other columns, `Site`, `Description`, and `Distance` all contain metadata about the sequencing data, such as the location sampled and the distance from the source of the Juliana River. 
 
 ```
-sample-id	InputFileName	Site	Description
-I1	I1.SRR12400120	Impacted	SRR12400120
+sample-id	InputFileName	Site	Description	Distance
+I1.SRR12400120	I1.SRR12400120	Impacted	SRR12400120	23.15
+I2.SRR12400119	I2.SRR12400119	Impacted	SRR12400119	23.15
+I3.SRR12400118	I3.SRR12400118	Impacted	SRR12400118	23.15
+S1.SRR12400125	S1.SRR12400125	Source	SRR12400125	0
+S2.SRR12400123	S2.SRR12400123	Source	SRR12400123	0
+S3.SRR12400124	S3.SRR12400124	Source	SRR12400124	0
+V1.SRR12400122	V1.SRR12400122	Valley	SRR12400122	7.774
+V2.SRR12400121	V2.SRR12400121	Valley	SRR12400121	7.774
 ```
 
-````{margin}
-```{admonition} Jargon: feature table, feature data
-:class: jargon
-If terms like *feature table* and *feature data* aren't clear
-right now, don't worry! They will be clear by the end of the week.
-```
-````
 
-1. **The upstream tutorial** covers steps up to the generation of the feature
-   table, which tallys the frequency of amplicon sequence variants (ASV) on a
-   per-sample basis, and feature data which lists the sequence that defines
-   each ASV in the feature table.
-2. **The downstream tutorial** begins with a feature table and feature data and
-   constitutes the analysis and interpretation of that information. We'll spend
-   the majority of the week on the **downstream** tutorial.
-
-The two parts of this tutorial are both dervived from the same data set
-{cite:t}`liao-data-2021`. The **upstream** tutorial uses a relatively small
-number of samples (n=41) and is designed to allow us to work through the most
-computationally expensive steps of the analysis quickly, so you can get
-experience running these steps. By working with fewer
-samples, these steps can be run in just a few minutes.
-
-The **downstream** tutorial uses the complete feature table and feature data
-published in FigShare by {cite:t}`liao-data-2021`. Since that data set
-contains many more samples (n=12,546) and over 550,000,000 sequences, it
-would be possible very time-consumming to run the
-**upstream** steps on this data interactively. We will show
-how to load that data in QIIME 2, and do some filtering of the full data to
-focus our work on specific samples of interest. In our case, we'll work with
-the {cite:t}`taur-autofmt-2018` samples. However, the full dataset will be
-available for you to filter in other ways, and to experiment with on your own.
-As the authors note: _These microbiota data, combined
-with the curated clinical metadata presented here, can serve as powerful
-hypothesis generators for microbiome studies._
