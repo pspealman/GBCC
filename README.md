@@ -51,7 +51,10 @@ This tutorial uses data from [Santana et al. (2024)](https://peerj.com/articles/
 >
 
 ### Uploading the paired end 16S read sequences
-Most 16S amplicon sequencing uses paired-end reads to sequence the variable regions of bacterial 16S ribosomal DNA. Here we use Galaxy's **Upload** to upload the paired-end fastq files and assign them names. 
+Most 16S amplicon sequencing uses paired-end reads to sequence the variable regions of bacterial 16S ribosomal DNA. Here we use Galaxy's **Upload** to upload the paired-end FASTQ files and assign them names. 
+
+#### A side note about FASTQ files
+While the FASTQ format is described in detail [here](https://en.wikipedia.org/wiki/FASTQ_format) for our purposes it's sufficient to know that each 16S amplicon is sequenced from two different directions: Forward (or Read 1, R1) and Reverse (or Read 2, R2). These paired end reads are stored, in order, in two seperate files, marked as R1 and R2. If the order of the reads are ever changed between the two files the reads will not pair correctly and may either be removed from further analysis or the run may fail entirely. 
 
 > <hands-on-title>Upload 16S sequences</hands-on-title>
 >
@@ -111,6 +114,13 @@ Now that the data is uploaded to your Galaxy account you can import it into QIIM
 >      - Finally, click the `Run Tool` button.
 >    
 {: .hands_on}
+
+#### Checking the quality of the sequencing data
+Not all sequencing data is the same and a little analysis can shed a lot of light on the kind of data you are working with. Now that the FASTQ files have been imported we can check the quality of the reads. As noted before each 16S amplicon has two reads; a Forward and Reverse read, and each read has three elements; a read ID, sequence, and quality score. Contemporary Illumina sequencing (CASAVA 1.8+) uses a quality scoring system (called Phred + 33) for each base in the sequence, where 0 is the worst quality to 40 being the highest quality. The quality score indicates the probablity that a nucleotide is the result of a sequencing error using the formula `Q = -10*log10(p)` [more here](https://en.wikipedia.org/wiki/Phred_quality_score). So a nucelltide with a quality score of 0 is 100% likely to be the result of a sequencing error; a 10 would be 10%; 13 would be 5% etc. 
+
+While the Phred score is a quality measure of each base, we want to identify large scale trends in sequencing quality. To do this we can use the `demux  A systemic sequencing issue 
+
+
 
 ### Generating ASVs
 Combining the paired-end reads using their overlapping sequence is an essential step for resoling each 16S variable region. We use DADA2 to perform qualit control and paired-end merging and produce **a**mplicon **s**equence **v**ariants (**ASVs**). DADA2 relies on the high-accuracy of contemporary PCR and short-read sequencing technologies that produce 99% accurate DNA sequences. DADA2 performs several steps to ensure high quality ASVs, first it filters reads that have low-quality scores, then it removes duplicated reads creating consensus sequences, it then corrects any sequence errors using quality scores and consensus sequences (*denoising*), lastly a search algorithm runs to identify any possible *PCR chimeras*; artifacts formed by the incorrect combination of two seperate read pairs. Finally, all the remaining read pairs now have high quality, de-noised, non-chimeric, overlapping sequences and they can easily me merged into high quality ASVs.   
