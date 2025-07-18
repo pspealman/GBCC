@@ -120,6 +120,8 @@ Not all sequencing data is the same and a little analysis can shed a lot of ligh
 
 While the Phred score is a quality measure of each base, we want to identify large scale trends in sequencing quality. To do this we can use the `demux summarize` tool. This tool gives us a graphical visualization of the underlying data. After running the   A systemic sequencing issue 
 
+![temp text](https://github.com/pspealman/GBCC/blob/main/figures/chrome_4Xc1xHKdTH.gif "try gif")
+
 
 
 ### Generating ASVs
