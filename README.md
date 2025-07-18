@@ -118,7 +118,7 @@ Now that the data is uploaded to your Galaxy account you can import it into QIIM
 #### Checking the quality of the sequencing data
 Not all sequencing data is the same and a little analysis can shed a lot of light on the kind of data you are working with. Now that the FASTQ files have been imported we can check the quality of the reads. As noted before each 16S amplicon has two reads; a Forward and Reverse read, and each read has three elements; a read ID, sequence, and quality score. Contemporary Illumina sequencing (CASAVA 1.8+) uses a quality scoring system (called Phred + 33) for each base in the sequence, where 0 is the worst quality to 40 being the highest quality. The quality score indicates the probablity that a nucleotide is the result of a sequencing error using the formula `Q = -10*log10(p)` [more here](https://en.wikipedia.org/wiki/Phred_quality_score). So a nucelltide with a quality score of 0 is 100% likely to be the result of a sequencing error; a 10 would be 10%; 13 would be 5% etc. 
 
-While the Phred score is a quality measure of each base, we want to identify large scale trends in sequencing quality. To do this we can use the `demux  A systemic sequencing issue 
+While the Phred score is a quality measure of each base, we want to identify large scale trends in sequencing quality. To do this we can use the `demux summarize` tool. This tool gives us a graphical visualization of the underlying data. After running the   A systemic sequencing issue 
 
 
 
