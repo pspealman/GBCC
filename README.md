@@ -49,6 +49,7 @@ This tutorial uses data from [Santana et al. (2024)](https://peerj.com/articles/
 >      https://github.com/pspealman/GBCC/raw/refs/heads/main/metadata/MappingFile_v2.tsv
 >      ```
 >
+>   ![Upload Metadata](https://github.com/pspealman/GBCC/blob/main/figures/Upload_metadata.gif "Upload Metadata")
 
 ### Uploading the paired end 16S read sequences
 Most 16S amplicon sequencing uses paired-end reads to sequence the variable regions of bacterial 16S ribosomal DNA. Here we use Galaxy's **Upload** to upload the paired-end FASTQ files and assign them names. 
@@ -120,7 +121,7 @@ Not all sequencing data is the same and a little analysis can shed a lot of ligh
 
 While the Phred score is a quality measure of each base, we want to identify large scale trends in sequencing quality. To do this we can use the `demux summarize` tool. This tool gives us a graphical visualization of the underlying data. After running the   A systemic sequencing issue 
 
-![temp text](https://github.com/pspealman/GBCC/blob/main/figures/chrome_4Xc1xHKdTH.gif "try gif")
+
 
 
 
