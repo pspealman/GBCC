@@ -97,6 +97,8 @@ While the FASTQ format is described in detail [here](https://en.wikipedia.org/wi
 >      - *Finally, click `Apply`
 >      - *Change the `Name` field to `galaxy_16S_sequences`
 >      - *Finally, click `Upload`
+>        
+>  ![Upload Sequences](https://github.com/pspealman/GBCC/blob/main/figures/Upload_sequences.gif "Upload Sequences")
 {: .hands_on}
 
 ### Importing the paired end 16S read sequences
@@ -115,6 +117,8 @@ Now that the data is uploaded to your Galaxy account you can import it into QIIM
 >      - Finally, click the `Run Tool` button.
 >    
 {: .hands_on}
+
+
 
 #### Checking the quality of the sequencing data
 Not all sequencing data is the same and a little analysis can shed a lot of light on the kind of data you are working with. Now that the FASTQ files have been imported we can check the quality of the reads. As noted before each 16S amplicon has two reads; a Forward and Reverse read, and each read has three elements; a read ID, sequence, and quality score. Contemporary Illumina sequencing (CASAVA 1.8+) uses a quality scoring system (called Phred + 33) for each base in the sequence, where 0 is the worst quality to 40 being the highest quality. The quality score indicates the probablity that a nucleotide is the result of a sequencing error using the formula `Q = -10*log10(p)` [more here](https://en.wikipedia.org/wiki/Phred_quality_score). So a nucelltide with a quality score of 0 is 100% likely to be the result of a sequencing error; a 10 would be 10%; 13 would be 5% etc. 
